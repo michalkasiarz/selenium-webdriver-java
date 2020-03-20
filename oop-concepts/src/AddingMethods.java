@@ -3,12 +3,20 @@ package src;
 public class AddingMethods {
 
     public static void main(String[] args) {
-        findGrades("Peter", 98);
-        findGrades("John", 84);
-        findGrades("Anne", 75);
+
+        String grade;
+        String studentName;
+
+        studentName = "John";
+        grade = findGrades(90);
+        displayGrades(studentName, grade);
+
+        studentName = "Tom";
+        grade = findGrades(110);
+        displayGrades(studentName, grade);
     }
 
-    public static void findGrades(String studentName, int score) {
+    public static String findGrades(int score) {
 
         String grade;
 
@@ -21,8 +29,12 @@ public class AddingMethods {
         } else {
             grade = "D";
         }
+        return grade;
+    }
+
+    public static void displayGrades(String studentName, String grade) {
+        System.out.println("********");
         System.out.println("Grade of " + studentName + " is " + grade + ".");
-
-
+        System.out.println("********");
     }
 }
