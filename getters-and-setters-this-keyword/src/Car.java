@@ -1,4 +1,4 @@
-public class CarWithGettersAndSetters {
+public class Car {
 
     // car definition
     private String color;
