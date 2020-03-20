@@ -3,9 +3,13 @@ package src;
 public class AddingMethods {
 
     public static void main(String[] args) {
+        findGrades("Peter", 98);
+        findGrades("John", 84);
+        findGrades("Anne", 75);
+    }
 
-        String studentName = "john";
-        int score = 70;
+    public static void findGrades(String studentName, int score) {
+
         String grade;
 
         if (score >= 90 && score <= 100) {
@@ -18,6 +22,7 @@ public class AddingMethods {
             grade = "D";
         }
         System.out.println("Grade of " + studentName + " is " + grade + ".");
+
 
     }
 }
