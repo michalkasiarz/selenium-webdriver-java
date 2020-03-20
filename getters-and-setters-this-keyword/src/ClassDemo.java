@@ -13,6 +13,10 @@ public class ClassDemo {
         // method call on bmw object
         bmw.increaseSpeed();
 
+        // calling getters
+        System.out.println(bmw.getModel());
+        System.out.println(bmw.getColor());
+
     }
 
 }
