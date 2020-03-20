@@ -40,8 +40,13 @@ public class Car {
         return year;
     }
 
+    // setter with validation
     public void setYear(int year) {
-        this.year = year;
+        if (year > 1900 && year <= 2020) {
+            this.year = year;
+        } else {
+            System.out.println("This year is not valied");
+        }
     }
 
     public int getDoors() {
