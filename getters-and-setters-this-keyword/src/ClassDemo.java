@@ -21,6 +21,8 @@ public class ClassDemo {
         // calling getters
         System.out.println(bmw.getModel());
         System.out.println(bmw.getColor());
+        System.out.println("Benz make is " + benz.getMake()); // Benz make is null, since it hasn't been set
+        // null is the default value of String
 
 
     }
