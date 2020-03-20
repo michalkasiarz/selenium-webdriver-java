@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/java-concepts-data-types/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/java-concepts-data-types" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/oop-concepts" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/getters-and-setters-this-keyword/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
