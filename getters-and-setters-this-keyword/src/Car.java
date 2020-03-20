@@ -7,6 +7,20 @@ public class Car {
     private int year;
     private int doors;
 
+    public Car() {
+        this(1995, 4, "UAZ");
+        this.color = "White";
+        this.make = "Unknown";
+        System.out.println("Executing constructor without parameters...");
+    }
+
+    public Car(int year, int doors, String model) {
+        this.year = year;
+        this.doors = doors;
+        this.model = model;
+        System.out.println("Executing constructor with three parameters...");
+    }
+
 
     public void increaseSpeed() {
         System.out.println("Increasing the speed!");
