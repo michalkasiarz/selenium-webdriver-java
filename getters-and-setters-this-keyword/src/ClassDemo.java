@@ -12,6 +12,7 @@ public class ClassDemo {
 
         Car benz = new Car(); // create and initialize object
         benz.setModel("c300");
+        benz.setYear(2021);
 
 
         // method call on bmw object
@@ -20,6 +21,7 @@ public class ClassDemo {
         // calling getters
         System.out.println(bmw.getModel());
         System.out.println(bmw.getColor());
+
 
     }
 
