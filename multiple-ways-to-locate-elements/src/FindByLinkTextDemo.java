@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 public class FindByLinkTextDemo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new FirefoxDriver();
         String baseURL = "https://learn.letskodeit.com/p/practice";
 
@@ -17,6 +17,11 @@ public class FindByLinkTextDemo {
         driver.get(baseURL);
 
         driver.findElement(By.linkText("Login")).click();
-    }
+        Thread.sleep(3000);
+
+        driver.findElement(By.partialLinkText("Forg")).click();
+        Thread.sleep(3000);
+        driver.close();
+}
 
 }
