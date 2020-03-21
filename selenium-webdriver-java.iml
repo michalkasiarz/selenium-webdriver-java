@@ -11,6 +11,7 @@
       <sourceFolder url="file://$MODULE_DIR$/multiple-ways-to-locate-elements" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/getters-and-setters-this-keyword" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/selenium-webdriver-first-step" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CSS-selectors-advanced" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
