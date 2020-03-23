@@ -3,6 +3,7 @@ package test;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -24,9 +25,14 @@ public class BasicActions {
     @Test
     public void test() {
         driver.get(baseURL);
+        driver.findElement(By.xpath("//div[@id='navbar']//a[@href='/sign_in']")).click();
+        System.out.println("Clicked on login");
+        driver.findElement(By.id("user_email")).clear();
+
     }
 
     @After
     public void tearDown() {
+        driver.quit();
     }
 }
