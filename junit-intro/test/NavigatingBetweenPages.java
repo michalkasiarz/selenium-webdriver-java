@@ -32,6 +32,7 @@ public class NavigatingBetweenPages {
 
         String urlToNavigate = "https://sso.teachable.com/secure/42299/users/sign_in?clean_login=true&reset_purchase_session=1";
         driver.navigate().to(urlToNavigate);
+        System.out.println("Navigating to Login Page");
 
         currentUrl = driver.getCurrentUrl();
         System.out.println("Current URL is: " + currentUrl);
@@ -51,6 +52,15 @@ public class NavigatingBetweenPages {
 
         currentUrl = driver.getCurrentUrl();
         System.out.println("Current URL is: " + currentUrl);
+
+        driver.navigate().back();
+        System.out.println("Navigate back...");
+        currentUrl = driver.getCurrentUrl();
+        System.out.println("Current URL is: " + currentUrl);
+
+        driver.navigate().refresh();
+        System.out.println("Navigate refresh");
+        driver.get(currentUrl);
     }
 
     @After
