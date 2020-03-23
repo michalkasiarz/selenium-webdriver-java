@@ -10,7 +10,6 @@ public class App {
         String nameUppered = name.toUpperCase();
         System.out.println(nameUppered);
         return nameUppered;
+
     }
-
-
 }
