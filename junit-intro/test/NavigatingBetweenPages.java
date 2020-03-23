@@ -23,6 +23,13 @@ public class NavigatingBetweenPages {
 
     @Test
     public void test() {
+        driver.get(baseURL);
+        String title = driver.getTitle();
+        System.out.println("Title: " + title);
+
+        String currentUrl = driver.getCurrentUrl();
+        System.out.println("Current URL: " + currentUrl);
+
 
     }
 
