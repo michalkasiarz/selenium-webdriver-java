@@ -28,6 +28,11 @@ public class BasicActions {
         driver.findElement(By.xpath("//div[@id='navbar']//a[@href='/sign_in']")).click();
         System.out.println("Clicked on login");
         driver.findElement(By.id("user_email")).clear();
+        driver.findElement(By.id("user_email")).sendKeys("test@email.com");
+        System.out.println("Keys to user email has been sent");
+        driver.findElement(By.id("user_password")).sendKeys("test");
+        System.out.println("Keys to user password has been sent");
+
 
     }
 
