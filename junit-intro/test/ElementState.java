@@ -25,7 +25,8 @@ public class ElementState {
 
     @Test
     public void test() {
-        WebElement element = driver.findElement(By.id(""))
+        WebElement element = driver.findElement(By.xpath(".//input[@name='q']"));
+        System.out.println("Is element enabled? " + element.isEnabled());
     }
 
     @After
