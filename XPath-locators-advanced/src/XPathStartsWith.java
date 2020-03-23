@@ -16,7 +16,7 @@ public class XPathStartsWith {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(baseURL);
 
-        driver.findElement(By.xpath("//div[@id='navbar']//a[starts-with(@class,'navbar-link')]")).click();
+        driver.findElement(By.xpath("//a[starts-with(@class,'navbar-link')]")).click();
 
 
     }
