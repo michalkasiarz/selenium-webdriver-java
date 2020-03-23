@@ -22,7 +22,7 @@ public class NavigatingBetweenPages {
     }
 
     @Test
-    public void test() {
+    public void test() throws InterruptedException {
         driver.get(baseURL);
         String title = driver.getTitle();
         System.out.println("Title: " + title);
@@ -30,7 +30,27 @@ public class NavigatingBetweenPages {
         String currentUrl = driver.getCurrentUrl();
         System.out.println("Current URL: " + currentUrl);
 
+        String urlToNavigate = "https://sso.teachable.com/secure/42299/users/sign_in?clean_login=true&reset_purchase_session=1";
+        driver.navigate().to(urlToNavigate);
 
+        currentUrl = driver.getCurrentUrl();
+        System.out.println("Current URL is: " + currentUrl);
+
+        Thread.sleep(2000);
+
+        driver.navigate().back();
+        System.out.println("Navigate back...");
+
+        currentUrl = driver.getCurrentUrl();
+        System.out.println("Current URL is: " + currentUrl);
+
+        Thread.sleep(2000);
+
+        driver.navigate().forward();
+        System.out.println("Navigate forward");
+
+        currentUrl = driver.getCurrentUrl();
+        System.out.println("Current URL is: " + currentUrl);
     }
 
     @After
