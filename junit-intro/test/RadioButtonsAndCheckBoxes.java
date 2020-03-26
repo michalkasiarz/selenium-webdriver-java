@@ -41,6 +41,16 @@ public class RadioButtonsAndCheckBoxes {
         WebElement hondaRadiobtn = driver.findElement(By.id("hondaradio"));
         // clicking on Honda radio button
         hondaRadiobtn.click();
+
+        WebElement bmwCheckBox = driver.findElement(By.id("bmwcheck"));
+        // clicking on BMW checkbox
+        bmwCheckBox.click();
+
+        Thread.sleep(2000);
+
+        WebElement benzCheckBox = driver.findElement(By.id("benzcheck"));
+        // clicking on Benz checkbox
+        benzCheckBox.click();
     }
 
     @After
