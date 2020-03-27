@@ -28,7 +28,7 @@ public class DropdownElements {
     }
 
     @Test
-    public void test() throws InterruptedException {
+    public void selectingElementsForLoop() throws InterruptedException {
 
         // finds dropdown element
         WebElement element = driver.findElement(By.id("carselect"));
@@ -48,10 +48,14 @@ public class DropdownElements {
     }
 
     @Test
-    public void test2() throws InterruptedException {
+    public void selectingElementsByMethod() throws InterruptedException {
         WebElement element = driver.findElement(By.id("carselect"));
         Select sel = new Select(element);
         Thread.sleep(2000);
+
+        sel.selectByVisibleText("Benz");
+        sel.selectByVisibleText("BMW");
+        sel.selectByVisibleText("Honda");
 
     }
 
