@@ -3,7 +3,6 @@ package test;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -12,25 +11,33 @@ import java.util.concurrent.TimeUnit;
 public class ElementDisplayed {
 
     WebDriver driver;
-    String baseURL;
+    String letKodeURL;
+    String expediaURL;
 
     @Before
     public void setUp() {
         driver = new FirefoxDriver();
-        baseURL = "http://letskodeit.teachable.com/";
+        letKodeURL = "http://letskodeit.teachable.com/pages/practice";
+        expediaURL = "http://www.expedia.com";
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get(baseURL);
+        driver.get(letKodeURL);
     }
 
     @Test
-    public void test() {
-
+    public void testLetsKodeIt() throws InterruptedException {
+        driver.get(letKodeURL);
 
     }
 
+    @Test
+    public void testExpedia() throws InterruptedException {
+        driver.get(expediaURL);
+    }
+
     @After
-    public void tearDown() {
+    public void tearDown() throws Exception {
+        Thread.sleep(2000);
         driver.quit();
     }
 }
