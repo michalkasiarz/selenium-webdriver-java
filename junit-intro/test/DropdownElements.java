@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 
+import java.lang.reflect.Array;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -42,7 +43,9 @@ public class DropdownElements {
 
             System.out.println("Number of elements to go: " + (elements.size() - i) + ".");
             sel.selectByIndex(i);
+            String optionName = elements.get(i).getText();
             System.out.println("Selected element with index " + i + ".");
+            System.out.println(optionName);
             Thread.sleep(3000);
         }
     }
