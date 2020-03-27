@@ -42,7 +42,10 @@ public class DropdownElements {
 
     @Test
     public void test2() throws InterruptedException {
+        WebElement element = driver.findElement(By.id("carselect"));
+        Select sel = new Select(element);
 
+        Thread.sleep(2000);
     }
 
     @After
