@@ -51,6 +51,11 @@ public class RadioButtonsAndCheckBoxes {
         WebElement benzCheckBox = driver.findElement(By.id("benzcheck"));
         // clicking on Benz checkbox
         benzCheckBox.click();
+
+        System.out.println("BMW radio button is selected? " + bmwRadioBtn.isSelected());
+        System.out.println("Benz radio button is selected? " + benzRadioBtn.isSelected());
+        System.out.println("BMW checkbox is selected? " + bmwCheckBox.isSelected());
+        System.out.println("Benz checkbox is selected? " + benzCheckBox.isSelected());
     }
 
     @After
