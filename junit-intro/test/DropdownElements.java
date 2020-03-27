@@ -30,13 +30,21 @@ public class DropdownElements {
     @Test
     public void test() throws InterruptedException {
 
-        // put webelements into a list
-        List<WebElement> element = driver.findElements(By.id("carselect"));
+        // finds dropdown element
+        WebElement element = driver.findElement(By.id("carselect"));
+        // creates Select object with previously found dropdown list as a parameter
+        Select sel = new Select(element);
+        // creates list of web elements
+        List<WebElement> elements = sel.getOptions();
 
-        for (int i = 0; i < element.size(); i++) {
-            Select sel = new Select(element.get(i));
-            System.out.println("Number of elements: " + element.size() + ".");
-            System.out.println("Selected element: " + sel + ".");
+        // for loop for every element in the web elements list
+        for (int i = 0; i < elements.size(); i++) {
+
+            System.out.println("Number of elements to go: " + (elements.size() - i) + ".");
+
+            sel.selectByIndex(i);
+
+            System.out.println("Selected element with index " + i + ".");
         }
     }
 
@@ -46,6 +54,7 @@ public class DropdownElements {
         Select sel = new Select(element);
 
         Thread.sleep(2000);
+
     }
 
     @After
