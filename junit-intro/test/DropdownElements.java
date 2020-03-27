@@ -41,10 +41,9 @@ public class DropdownElements {
         for (int i = 0; i < elements.size(); i++) {
 
             System.out.println("Number of elements to go: " + (elements.size() - i) + ".");
-
             sel.selectByIndex(i);
-
             System.out.println("Selected element with index " + i + ".");
+            Thread.sleep(3000);
         }
     }
 
@@ -52,7 +51,6 @@ public class DropdownElements {
     public void test2() throws InterruptedException {
         WebElement element = driver.findElement(By.id("carselect"));
         Select sel = new Select(element);
-
         Thread.sleep(2000);
 
     }
