@@ -7,8 +7,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class DropdownElements {
@@ -27,6 +29,19 @@ public class DropdownElements {
 
     @Test
     public void test() throws InterruptedException {
+
+        // put webelements into a list
+        List<WebElement> element = driver.findElements(By.id("carselect"));
+
+        for (int i = 0; i < element.size(); i++) {
+            Select sel = new Select(element.get(i));
+            System.out.println("Number of elements: " + element.size() + ".");
+            System.out.println("Selected element: " + sel + ".");
+        }
+    }
+
+    @Test
+    public void test2() throws InterruptedException {
 
     }
 
