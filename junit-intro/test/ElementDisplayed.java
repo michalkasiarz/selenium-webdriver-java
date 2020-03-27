@@ -54,6 +54,10 @@ public class ElementDisplayed {
     @Test
     public void testExpedia() throws InterruptedException {
         driver.get(expediaURL);
+
+        WebElement childDropdown = driver.findElement(By.id("package-1-age-select-1"));
+        // it is going to fail here!
+        System.out.println("Child dropdown displayed? " + childDropdown.isDisplayed());
     }
 
     @After
