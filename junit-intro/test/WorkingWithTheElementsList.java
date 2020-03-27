@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class WorkingWithTheElementsList {
@@ -28,6 +29,17 @@ public class WorkingWithTheElementsList {
     @Test
     public void test() throws InterruptedException {
 
+        List<WebElement> radioButtons = driver.findElements(By.xpath("//input[contains(@type, 'radio') and contains(@name, 'cars')]"));
+        int size = radioButtons.size();
+        boolean isChecked = false;
+
+        // goes through every element of the list
+        for (int i = 0; i < size; i++) {
+
+            // checking if a button is selected
+            isChecked = radioButtons.get(i).isSelected();
+
+        }
     }
 
     @After
