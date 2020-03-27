@@ -38,9 +38,10 @@ public class WorkingWithTheElementsList {
             // checking if a button is selected
             isChecked = radioButtons.get(i).isSelected();
 
-            if (isChecked) {
+            if (!isChecked) {
                 // clicking of button if not selected
                 radioButtons.get(i).click();
+                System.out.println("Clicking on " + radioButtons.get(i) + " now...");
                 Thread.sleep(2000);
             }
 
